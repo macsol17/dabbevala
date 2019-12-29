@@ -1,0 +1,97 @@
+
+<script type="text/javascript">
+	 document.getElementById("mainbody").className = "archive post-type-archive post-type-archive-product kc-css-system woocommerce woocommerce-page woocommerce-no-js tribe-no-js yith-wapo-frontend left-sidebar woocommerce-active lite grid-view columns-3";
+</script>
+
+	
+	<div id="content" class="site-content" tabindex="-1" >
+		<div class="col-full">
+
+			<div id="primary" class="content-area">
+			<main id="main" class="site-main" role="main">
+		<div class="woocommerce"></div><header class="woocommerce-products-header">
+	
+	</header>
+<ul class="products columns-3">
+
+   <div class="woocommerce" id="addedcrt">
+	<div class="woocommerce-message" role="alert"><a href="cart.php" class="button wc-forward">View cart</a> <i id="addedcrtele">“Apricot Chicken”</i> has been added to your cart.</div>
+</div>
+
+
+<li   ng-repeat="u in menu | filter : {name: nme, category:appflt, day:tme}" ng-if="u.day == day || u.day == yesterday || u.day == tomorrow" class="post-270 product type-product status-publish has-post-thumbnail product_cat-cold-drinks product_cat-shakes instock shipping-taxable purchasable product-type-simple">
+	<div class="product-outer">
+		<div class="product-inner">	
+		<div class="product-image-wrapper">
+			<h3 class="woocommerce-loop-product__title camcse"><i style="float: left;">{{u.name}}</i> <small style="font-size: 14px; float: right; margin-top: 22px">({{u.totalrating}} Reviews)</small> <div><small style="font-size: 14px;float: left;position: absolute; left: 10px;margin-top: 22px;">{{u.category}}</small> <jk-rating-stars class="ratng" rating="u.rating" on-rating="onItemRating(rating)"></jk-rating-stars></div> </h3>
+			
+			<a href="#" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+
+			<img width="300" height="150" src="{{u.imgurl}}" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" title="59" srcset="" sizes="(max-width: 150px) 100vw, 150px" style="display: inline-block;" />
+			
+			
+		</a>		
+	    </div>
+	<div class="product-content-wrapper">
+		<a href="#" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+		    <span class="price">
+			<span class="woocommerce-Price-amount amount camcse">
+			<span class="woocommerce-Price-currencySymbol">{{u.time}}</span></span>
+		    </span>
+		     <i ng-init="submenu=parJson(u.menu)">
+									<i ng-repeat="y in submenu">
+									<i ng-repeat="z in product track by $index">
+									<i ng-if="y == z.id">
+							    <span class="price" style="margin-bottom: 30px;">
+								<span class="woocommerce-Price-amount amount">
+									
+								<span class="woocommerce-Price-currencySymbol camcse">
+								
+										<i><img src="{{z.imgurl}}" width="40" style="display: inline-block;margin: 0;float: left;">&nbsp;{{z.name}}&nbsp;- 4</i><i ng-if="$index != product.length-1 && product.length > 1">,</i>
+									
+								</span></span>
+								
+							    </span>
+							</i>
+							    	</i>
+								   </i>
+									</i>
+		    <span class="price">
+			<span class="woocommerce-Price-amount amount highlight">
+			<span class="woocommerce-Price-currencySymbol">&#8377; </span>{{u.price}} Per Meal</span>
+		    </span>
+         </a>
+       <div class="hover-area">
+       
+       </div>		
+   </div>
+
+		</div><!-- /.product-inner -->
+	</div><!-- /.product-outer -->
+</li>
+
+
+
+</ul>
+
+			</main><!-- #main -->
+		</div><!-- #primary -->
+
+		
+<div id="secondary" class="widget-area" role="complementary">
+<div id="nav_menu-1" class="widget widget_nav_menu"><div class="menu-food-menu-container">
+	<ul id="menu-food-menu-2" class="menu">
+		<li ng-click="tme=yesterday" style="cursor: pointer;" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-557">
+			<a><i class="po po-pizza"></i>Yesterday's Menu</a></li>
+<li ng-click="tme=day" style="cursor: pointer;" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-559"><a href="#"><i class="po po-burger"></i>Today's Menu</a></li>
+<li ng-click="tme=tomorrow" style="cursor: pointer;" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-558"><a href="#"><i class="po po-salads"></i>Tomorrow's Menu</a></li>
+
+</ul></div></div><div id="woocommerce_product_search-1" class="widget woocommerce widget_product_search"><form role="search" method="get" class="woocommerce-product-search" action="">
+	<label class="screen-reader-text" for="woocommerce-product-search-field-0">Search By Name:</label>
+	<input type="search" ng-model="nme" id="woocommerce-product-search-field-0" class="search-field" placeholder="Search products&hellip;" value="" name="s" />
+	<button type="submit" value="Search">Search</button>
+	<input type="hidden" name="post_type" value="Search product" />
+</form>
+</div></div><!-- /.sidebar-shop -->
+		</div><!-- .col-full -->
+	</div><!-- #content -->

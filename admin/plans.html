@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Dabbevala || Panel</title>
+
+	<!-- Main Styles -->
+	<link rel="stylesheet" href="../modules/assets/styles/style.min.css">
+
+	<!-- mCustomScrollbar -->
+	<link rel="stylesheet" href="../modules/assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.min.css">
+
+	<!-- Waves Effect -->
+	<link rel="stylesheet" href="../modules/assets/plugin/waves/waves.min.css">
+
+	<!-- Sweet Alert -->
+	<link rel="stylesheet" href="../modules/assets/plugin/sweet-alert/sweetalert.css">
+	
+	<!-- Percent Circle -->
+	<link rel="stylesheet" href="../modules/assets/plugin/percircle/css/percircle.css">
+
+	<!-- Chartist Chart -->
+	<link rel="stylesheet" href="../modules/assets/plugin/chart/chartist/chartist.min.css">
+
+	<!-- FullCalendar -->
+	<link rel="stylesheet" href="../modules/assets/plugin/fullcalendar/fullcalendar.min.css">
+	<link rel="stylesheet" href="../modules/assets/plugin/dropify/css/dropify.min.css">
+	<link rel="stylesheet" href="../modules/assets/plugin/fullcalendar/fullcalendar.print.css" media='print'>
+
+	<!-- Color Picker -->
+	<link rel="stylesheet" href="../modules/assets/color-switcher/color-switcher.min.css">
+
+	
+	<!-- FlexDatalist -->
+	<link rel="stylesheet" href="../modules/assets/plugin/flexdatalist/jquery.flexdatalist.min.css">
+
+	<!-- Popover -->
+	<link rel="stylesheet" href="../modules/assets/plugin/popover/jquery.popSelect.min.css">
+
+	<!-- Select2 -->
+	<link rel="stylesheet" href="../modules/assets/plugin/select2/css/select2.min.css">
+
+	<!-- Timepicker -->
+	<link rel="stylesheet" href="../modules/assets/plugin/timepicker/bootstrap-timepicker.min.css">
+
+	<!-- Touch Spin -->
+	<link rel="stylesheet" href="../modules/assets/plugin/touchspin/jquery.bootstrap-touchspin.min.css">
+
+	<!-- Colorpicker -->
+	<link rel="stylesheet" href="../modules/assets/plugin/colorpicker/css/bootstrap-colorpicker.min.css">
+
+	<!-- Datepicker -->
+	<link rel="stylesheet" href="../modules/assets/plugin/datepicker/css/bootstrap-datepicker.min.css">
+
+	<!-- DateRangepicker -->
+	<link rel="stylesheet" href="../modules/assets/plugin/daterangepicker/daterangepicker.css">
+
+	<!-- Color Picker -->
+	<link rel="stylesheet" href="../modules/assets/color-switcher/color-switcher.min.css">
+	<script src="../modules/assets/scripts/jquery.min.js"></script>
+	<script data-require="angular.js@*" data-semver="1.5.0" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+	<script type="text/javascript" src="js/adminit.js"></script>
+	<script type="text/javascript" src="js/admfun.js"></script>
+</head>
+
+<body ng-app="dvadm" ng-controller="dvadmCtrl">
+	
+	<i ng-include="'nav.html'"></i>
+
+
+<div id="wrapper">
+	<div class="main-content">
+		<div class="row small-spacing">
+			<div class="col-xs-12">
+				<div class="box-content">
+					<h4 class="box-title">Add Plan   <button type="button" onclick="tglfnc(2,2)" class="btn btn-primary waves-effect waves-light" style="margin-left: 70%;">Add Plan</button></h4>
+
+
+<div id="1">
+
+	<div class="table-responsive" data-pattern="priority-columns">
+						<table id="tech-companies-1" class="table table-small-font table-bordered table-striped">
+							<thead>
+								<tr>
+									<th data-priority="1">Plan Name</th>
+									<th data-priority="3">Time</th>
+									<th data-priority="1">Food Type</th>
+									<th data-priority="3">Subscription Type</th>
+									<th data-priority="3">Plan Description</th>
+									
+									
+									
+									
+								</tr>
+							</thead>
+							<tbody>
+									
+								<tr ng-repeat="pl in plans">
+									<th><span class="co-name">{{pl.name}} </span></th>
+									<td>{{pl.tme}}</td>
+								<td>{{pl.foodtype}}</td>
+								<td>{{pl.subscriptiontype}}</td>
+								<td>{{pl.plandesc}}</td>
+								
+								
+								
+								<td><button type="button" class="btn btn-warning btn-bordered waves-effect waves-light">Edit</button>
+									<form method="POST" style="display: inline-block;">
+									<input type="hidden" value="<?php echo $var[$i]->id; ?>" name="delitm">	
+									<button type="submit" name="delnw" class="btn btn-danger btn-bordered waves-effect waves-light">Delete</button>
+								    </form>
+								</td>
+									
+								</tr>      
+								
+							</tbody>
+						</table>
+					</div> 
+		<!-- /.dropdown js__dropdown -->
+		
+</div>
+
+
+<div  id="2" style="display: none;">
+<form data-toggle="validator"  ng-submit="createplan()"  method="POST" enctype="multipart/form-data">
+      
+	<div class="form-group">
+	<label for="inputName" class="control-label">Plan Name</label>
+	<input type="text" name="pname" ng-model="pname" class="form-control" id="inputName" placeholder="Plan Name" required>
+	</div>
+	
+	<div class="form-group" >
+        <label for="inputName" class="control-label">ADD PACKAGES</label>
+   <i  ng-repeat="column in columns">
+
+      <input type="text" name="columnName"  class="form-control" ng-model="column.validity" name="" placeholder="Validity" required>
+    
+
+     <input type="text" ng-model="column.price"  class="form-control" name="" placeholder="Price" required>
+     
+     <button class="remove"  ng-click="removeColumn($index)">x</button> 
+   </i>
+   <button class="addfields" ng-click="addNewColumn()">Add Package</button>
+  
+</div>
+	
+	
+	<div class="form-group">
+	<label for="inputName" class="control-label">Time</label>
+	<i ng-repeat="fruit in fruits track by $index">
+					          <input type="checkbox" ng-model="formData.selectedFruits[fruit.name]" name="time{{$index}}" ng-change="checkboxChanged()" ng-required="!someSelected" /> {{fruit.name}}
+					     </i>
+	</div>
+	<div class="form-group">
+	<label for="inputName" class="control-label">Subscription Type</label>
+	<i ng-repeat="sbtyp in subtyp track by $index">
+					          <input type="checkbox" ng-model="formData.subtyp[sbtyp.name]" name="stype{{$index}}" ng-change="subtypChanged()" ng-required="!somesubtypSelected" /> {{sbtyp.name}}
+					     </i>
+	</div>
+
+	<div class="form-group">
+	<label for="inputName" class="control-label">Food Type</label>
+	<i ng-repeat="fdtyp in fodtyp track by $index">
+					          <input type="checkbox" ng-model="formData.fodtyp[fdtyp.name]" name="ftype{{$index}}" ng-change="fodtypChanged()" ng-required="!somefodtypSelected" /> {{fdtyp.name}}
+					     </i>
+	</div>
+     
+	
+    
+     
+    
+    
+    <div  class="form-group" style="text-align: center;">
+    <button name="addusr" type="submit" class="btn btn-icon btn-icon-left btn-primary btn-lg waves-effect waves-light"><i class="ico fa fa-plus"></i>Add Plan</button>
+    </div>
+</form>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<style type="text/css">
+	.select2-container{
+		width: 100%!important;
+	}
+</style>
+
+<script type="text/javascript">
+	if (!localStorage.getItem("adminuser")) {
+  location.href=".";
+}
+</script>
+
+
+	<i ng-include="'footer.html'"></i>

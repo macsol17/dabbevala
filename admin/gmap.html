@@ -1,0 +1,17 @@
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<address>
+B303 balaji foster height, crossing republik, ghaziabad, india 201016
+</address>
+
+<script>
+
+$(document).ready(function () {
+    //Convert address tags to google map links - Copyright Michael Jasper 2011
+    $('address').each(function () {
+        var link = "<a href='http://maps.google.com/maps?q=" + encodeURIComponent( $(this).text() ) + "' target='_blank'>" + $(this).text() + "</a>";
+        $(this).html(link);
+    });
+});
+</script>

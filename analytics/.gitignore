@@ -1,0 +1,28 @@
+# OS or Editor folders
+.DS_Store
+Thumbs.db
+.cache
+.idea
+
+# Sublime editor files
+*.sublime-project
+*.sublime-workspace
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# npm stuff
+node_modules
+npm-debug.log
+
+# python modules
+python_modules
+
+# Built files
+public/
+build/
+
+# Private keys
+service-account-key.json
+bitly_api_key.cfg

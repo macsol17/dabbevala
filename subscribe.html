@@ -1,0 +1,60 @@
+
+
+
+	<!-- Main Styles -->
+	<link rel="stylesheet" href="modules/assets/styles/style.min.css">
+<div class="pizzaro-breadcrumb"><nav class="woocommerce-breadcrumb" ><a href=".">Home</a><span class="delimiter"><i class="po po-arrow-right-slider"></i></span>Subscription</nav></div>
+
+<div ng-controller="subs" id="wrapper">
+	<div class="main-content" style="margin-left: 0;padding-top: 0px;">
+		<div class="pricing-plan">
+			<div class="pricing-table">
+				<div class="col col-first">
+					<div class="thead"><div class="center-v">Choose your plan</div></div>
+					<div class="td">Food Type</div>
+					<div class="td">Time</div>
+					<div class="td">Subscription Type</div> 
+					
+					<div class="td"></div>   
+				</div>
+				<div class="col" ng-repeat="pl in plans track by $index">
+					<div class="thead bg-blue-1">
+						<h4>{{pl.name}}</h4>
+						<div class="price">
+							<span class="currency"></span>
+							<span class="number">1</span>
+							<span class="small_number"></span>
+							<span class="time">DAY</span>
+						</div>
+					</div>
+					<div class="td">
+						{{pl.foodtype}}
+					 </div>
+					<div class="td">
+						{{pl.time}}
+					</div>
+					<div class="td">
+						{{pl.subscriptiontype}}
+					</div>
+					<i ng-init="menu=parJson(pl.plandesc)"></i>
+					
+					<div class="td" ng-repeat= "m in menu"><input type="radio" name="plan" ng-model="$parent.psub" ng-value="m.colId">{{m.validity}}  For {{m.price}}</div>
+					
+					<div class="td"><a style="cursor: pointer;"  ng-click="subscribe($index, psub)" class="btn-order js__popup_open" data-target="#register-form-popup-2">ORDER NOW</a></div>       
+				</div>
+				
+			
+				
+			</div>
+		</div>
+	
+	</div>
+	<!-- /.main-content -->
+</div><!--/#wrapper -->
+
+<style type="text/css">
+	.pricing-table .price .time{
+		font-size: 14px;
+	}
+</style>
+

@@ -1,0 +1,39 @@
+
+	<link rel="stylesheet" href="theme/assets/styles/style.min.css">
+
+	<!-- Waves Effect -->
+	<link rel="stylesheet" href="theme/assets/plugin/waves/waves.min.css">
+	<div id="single-wrapper">
+<div ng-controller="valid" id="2" >
+<form  ng-submit="validate()" data-toggle="validator" class="frm-single" method="POST" enctype="multipart/form-data">
+      <div class="inside">
+			<div class="title">Validate Your Number</div>
+			<!-- /.title -->
+			
+			<!-- /.frm-title -->
+			<div class="frm-input"><input name="otp" ng-model="otp" type="text" placeholder="Enter OTP" class="frm-inp" required><i class="fa fa-lock frm-ico"></i></div>
+			
+			<!-- /.frm-input -->
+			<div class="clearfix margin-bottom-20">
+				
+				<!-- /.pull-left -->
+				<div id ="demo"class="pull-right"><a href="page-recoverpw.html" class="a-link"><i class="fa fa-unlock-alt"></i>Resend OTP</a></div>
+				<!-- /.pull-right -->
+			</div>
+			<!-- /.clearfix -->
+			<button type="submit" name="login" class="frm-submit">Continue<i class="fa fa-arrow-circle-right"></i></button>
+			
+			<!-- /.row -->
+			
+			<div class="frm-footer">Dabbawala © 2019. </div>
+			<!-- /.footer -->
+		</div>
+	
+</form>
+</div>
+</div>
+<style type="text/css">
+	.demo{
+		display: none;
+	}
+</style>

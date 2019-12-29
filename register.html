@@ -1,0 +1,48 @@
+
+	<link rel="stylesheet" href="theme/assets/styles/style.min.css">
+
+	<!-- Waves Effect -->
+	<link rel="stylesheet" href="theme/assets/plugin/waves/waves.min.css">
+	<div id="single-wrapper">
+<div ng-controller="llogin" id="2" >
+<form  ng-submit="reg()" data-toggle="validator" class="frm-single" method="POST" enctype="multipart/form-data">
+      <div class="inside">
+			<div class="title">Register</div>
+			<!-- /.title -->
+			
+			<!-- /.frm-title -->
+			<div class="frm-input"><input name="fname" ng-model="fname" type="text" placeholder="First Name" class="frm-inp" required><i class="fa fa-user frm-ico"></i></div>
+			<!-- /.frm-input -->
+			<div class="frm-input"><input name="lname" ng-model="lanme" type="text" placeholder="Last Name" class="frm-inp"><i class="fa fa-user frm-ico"></i></div>
+			<!-- /.frm-input -->
+			<!-- /.frm-input -->
+			<div class="frm-input"><input name="email" ng-model="email" type="email" placeholder="Email" class="frm-inp"><i class="fa fa-envelope frm-ico"></i></div>
+			<!-- /.frm-input -->
+			<!-- /.frm-input -->
+			<div class="frm-input"><input name="uph" ng-model="uph" type="tel" max="10" placeholder=" Contact Number" class="frm-inp"><i class="fa fa-lock frm-ico"></i></div>
+			<!-- /.frm-input -->
+			<!-- /.frm-input -->
+			<div class="frm-input"><input name="address" ng-model="add" type="text" placeholder="Enter Address" class="frm-inp"><i class="fa fa-lock frm-ico"></i></div>
+			<div class="frm-input"><input name="city" ng-model="city" type="text" placeholder="Enter City" class="frm-inp"><i class="fa fa-lock frm-ico"></i></div>
+			<div class="frm-input"><input name="state" ng-model="state" type="text" placeholder="State" class="frm-inp"><i class="fa fa-lock frm-ico"></i></div>
+			<div class="frm-input"><input name="country" ng-model="country" type="text" placeholder="Country" class="frm-inp"><i class="fa fa-lock frm-ico"></i></div>
+			<div class="frm-input"><input name="zipcode" ng-model="zipcode" type="text" placeholder="Zip Code" class="frm-inp"><i class="fa fa-lock frm-ico"></i></div>
+			<!-- /.frm-input -->
+			<div class="clearfix margin-bottom-20">
+				
+				<!-- /.pull-left -->
+				<div class="pull-right"><a href="page-recoverpw.html" class="a-link"><i class="fa fa-unlock-alt"></i>Forgot password?</a></div>
+				<!-- /.pull-right -->
+			</div>
+			<!-- /.clearfix -->
+			<button type="submit" name="login" class="frm-submit">Register<i class="fa fa-arrow-circle-right"></i></button>
+			
+			<!-- /.row -->
+			
+			<div class="frm-footer">Dabbawala © 2019. <a ng-click="change()" style="float: right; cursor:pointer">Register With Us </a></div>
+			<!-- /.footer -->
+		</div>
+	
+</form>
+</div>
+</div>

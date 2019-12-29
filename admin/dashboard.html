@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Dabbevala || Panel</title>
+
+	<!-- Main Styles -->
+	<link rel="stylesheet" href="../modules/assets/styles/style.min.css">
+
+	<!-- mCustomScrollbar -->
+	<link rel="stylesheet" href="../modules/assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.min.css">
+
+	<!-- Waves Effect -->
+	<link rel="stylesheet" href="../modules/assets/plugin/waves/waves.min.css">
+
+	<!-- Sweet Alert -->
+	<link rel="stylesheet" href="../modules/assets/plugin/sweet-alert/sweetalert.css">
+	
+	<!-- Percent Circle -->
+	<link rel="stylesheet" href="../modules/assets/plugin/percircle/css/percircle.css">
+
+	<!-- Chartist Chart -->
+	<link rel="stylesheet" href="../modules/assets/plugin/chart/chartist/chartist.min.css">
+
+	<!-- FullCalendar -->
+	<link rel="stylesheet" href="../modules/assets/plugin/fullcalendar/fullcalendar.min.css">
+	<link rel="stylesheet" href="../modules/assets/plugin/dropify/css/dropify.min.css">
+	<link rel="stylesheet" href="../modules/assets/plugin/fullcalendar/fullcalendar.print.css" media='print'>
+
+	<!-- Color Picker -->
+	<link rel="stylesheet" href="../modules/assets/color-switcher/color-switcher.min.css">
+
+	
+	<!-- FlexDatalist -->
+	<link rel="stylesheet" href="../modules/assets/plugin/flexdatalist/jquery.flexdatalist.min.css">
+
+	<!-- Popover -->
+	<link rel="stylesheet" href="../modules/assets/plugin/popover/jquery.popSelect.min.css">
+
+	<!-- Select2 -->
+	<link rel="stylesheet" href="../modules/assets/plugin/select2/css/select2.min.css">
+
+	<!-- Timepicker -->
+	<link rel="stylesheet" href="../modules/assets/plugin/timepicker/bootstrap-timepicker.min.css">
+
+	<!-- Touch Spin -->
+	<link rel="stylesheet" href="../modules/assets/plugin/touchspin/jquery.bootstrap-touchspin.min.css">
+
+	<!-- Colorpicker -->
+	<link rel="stylesheet" href="../modules/assets/plugin/colorpicker/css/bootstrap-colorpicker.min.css">
+
+	<!-- Datepicker -->
+	<link rel="stylesheet" href="../modules/assets/plugin/datepicker/css/bootstrap-datepicker.min.css">
+
+	<!-- DateRangepicker -->
+	<link rel="stylesheet" href="../modules/assets/plugin/daterangepicker/daterangepicker.css">
+
+	<!-- Color Picker -->
+	<link rel="stylesheet" href="../modules/assets/color-switcher/color-switcher.min.css">
+	<script src="../modules/assets/scripts/jquery.min.js"></script>
+	<script data-require="angular.js@*" data-semver="1.5.0" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+	<script type="text/javascript" src="js/adminit.js"></script>
+	<script type="text/javascript" src="js/admfun.js"></script>
+</head>
+
+<body ng-app="dvadm" ng-controller="dvadmCtrl">
+	
+	<i ng-include="'nav.html'"></i>
+
+<script type="text/javascript">
+	if (!localStorage.getItem("adminuser")) {
+  location.href=".";
+}
+</script>
+
+	<i ng-include="'footer.html'"></i>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Dabbevala || Panel</title>
+
+	<!-- Main Styles -->
+	<link rel="stylesheet" href="../modules/assets/styles/style.min.css">
+
+	<!-- mCustomScrollbar -->
+	<link rel="stylesheet" href="../modules/assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.min.css">
+
+	<!-- Waves Effect -->
+	<link rel="stylesheet" href="../modules/assets/plugin/waves/waves.min.css">
+
+	<!-- Sweet Alert -->
+	<link rel="stylesheet" href="../modules/assets/plugin/sweet-alert/sweetalert.css">
+	
+	<!-- Percent Circle -->
+	<link rel="stylesheet" href="../modules/assets/plugin/percircle/css/percircle.css">
+
+	<!-- Chartist Chart -->
+	<link rel="stylesheet" href="../modules/assets/plugin/chart/chartist/chartist.min.css">
+
+	<!-- FullCalendar -->
+	<link rel="stylesheet" href="../modules/assets/plugin/fullcalendar/fullcalendar.min.css">
+	<link rel="stylesheet" href="../modules/assets/plugin/dropify/css/dropify.min.css">
+	<link rel="stylesheet" href="../modules/assets/plugin/fullcalendar/fullcalendar.print.css" media='print'>
+
+	<!-- Color Picker -->
+	<link rel="stylesheet" href="../modules/assets/color-switcher/color-switcher.min.css">
+
+	
+	<!-- FlexDatalist -->
+	<link rel="stylesheet" href="../modules/assets/plugin/flexdatalist/jquery.flexdatalist.min.css">
+
+	<!-- Popover -->
+	<link rel="stylesheet" href="../modules/assets/plugin/popover/jquery.popSelect.min.css">
+
+	<!-- Select2 -->
+	<link rel="stylesheet" href="../modules/assets/plugin/select2/css/select2.min.css">
+
+	<!-- Timepicker -->
+	<link rel="stylesheet" href="../modules/assets/plugin/timepicker/bootstrap-timepicker.min.css">
+
+	<!-- Touch Spin -->
+	<link rel="stylesheet" href="../modules/assets/plugin/touchspin/jquery.bootstrap-touchspin.min.css">
+
+	<!-- Colorpicker -->
+	<link rel="stylesheet" href="../modules/assets/plugin/colorpicker/css/bootstrap-colorpicker.min.css">
+
+	<!-- Datepicker -->
+	<link rel="stylesheet" href="../modules/assets/plugin/datepicker/css/bootstrap-datepicker.min.css">
+
+	<!-- DateRangepicker -->
+	<link rel="stylesheet" href="../modules/assets/plugin/daterangepicker/daterangepicker.css">
+
+	<!-- Color Picker -->
+	<link rel="stylesheet" href="../modules/assets/color-switcher/color-switcher.min.css">
+	<script src="../modules/assets/scripts/jquery.min.js"></script>
+	<script data-require="angular.js@*" data-semver="1.5.0" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+	<script type="text/javascript" src="js/adminit.js"></script>
+	<script type="text/javascript" src="js/admfun.js"></script>
+</head>
+
+<body ng-app="dvadm" ng-controller="dvadmCtrl">
+	
+	<i ng-include="'nav.html'"></i>
+
+
+
+<div id="wrapper">
+	<div class="main-content">
+		<div class="row small-spacing">
+			<div class="col-xs-12">
+				<div class="box-content">
+					<h4 class="box-title">Add Menu   <button type="button" onclick="tglfnc(2,2)" class="btn btn-primary waves-effect waves-light" style="margin-left: 70%;">Add Menu</button></h4>
+
+
+<div id="1">
+
+	<div class="table-responsive" data-pattern="priority-columns">
+						<table id="tech-companies-1" class="table table-small-font table-bordered table-striped">
+							<thead>
+								<tr>
+									<th data-priority="1">Name</th>
+									<th data-priority="3">Menu Products</th>
+									<th data-priority="1">Time</th>
+									<th data-priority="1">Day</th>
+									<th data-priority="1">Category</th>
+									<th data-priority="1">Price</th>
+									<th data-priority="3">Date</th>
+									<th data-priority="3">Function</th>
+									
+									
+								</tr>
+							</thead>
+							<tbody>
+									
+								<tr ng-repeat="u in menu">
+									<th><span class="co-name">{{u.name}}</span></th>
+									<td>{{u.menu}}</td>
+								<td>{{u.time}}</td>
+								<td>{{u.day}}</td>
+								<td>{{u.category}}</td>
+								<td>{{u.price}}</td>
+								<td>{{u.date}}</td>
+								<td>
+									<button ng-click="del(u.id,'menu')" name="delnw" class="btn btn-danger btn-bordered waves-effect waves-light">Delete</button>
+								   
+								</td>
+									
+								</tr>      
+								
+								
+							</tbody>
+						</table>
+					</div> 
+		<!-- /.dropdown js__dropdown -->
+		
+</div>
+
+
+<div  id="2" style="display: none;">
+<form data-toggle="validator" action="../modules/addmenu.php" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+					<label for="inputName" class="control-label">Feature Image</label>
+					<input type="file" name="imguploaded" id="input-file-to-destroy" class="dropify" data-max-file-size="2M" data-max-height="2000" />
+                    <p class="help margin-top-10">Only portrait or square images, 2M max and 2000px max-height.</p>
+				</div>
+			
+	<div class="form-group">
+	<label for="inputName" class="control-label">Name</label>
+	<input type="text" name="mname" class="form-control" id="inputName" placeholder="Menu Name" required>
+	</div>
+	
+	<div class="form-group">
+	<p class="margin-top-20">Time</p>
+	<select name="mtime" class="select2_2 form-control" multiple="multiple" required>	
+	<option value="breakfast">Breakfast</option>
+	<option value="lunch">Lunch</option>
+	<option value="dinner">Dinner</option>
+	</select>
+	</div>
+     
+	
+	<div class="form-group">
+	<p class="margin-top-20">Day</p>
+	<select name="mday" class="select2_2 form-control">	
+	<option value="Monday">Monday</option>
+	<option value="Tuesday">Tuesday</option>
+	<option value="Wednesday">Wednesday</option>
+	<option value="Thursday">Thursday</option>
+	<option value="Friday">Friday</option>
+	<option value="Saturday">Saturday</option>
+	<option value="Sunday">Sunday</option>
+	</select>
+	</div>
+    
+     <div class="form-group">
+	<p class="margin-top-20">Category</p>
+	<select name="mcatg" class="select2_2 form-control" required>
+	<option value="south-indian">South Indian</option>
+	<option value="north-indian">North Indian</option>
+	
+	</select>
+	</div>
+    
+    <div class="form-group">
+	<label for="inputName" class="control-label">Menu Price</label>
+	<input type="number" name="mprc" class="form-control" id="inputName" placeholder="Menu Price" required>
+	</div>
+
+    <div class="form-group">
+    <p class="margin-top-20">Menu Products</p>	
+    	
+    	<div class="chkbx" ng-repeat="p in product">
+    		<input type="checkbox" name="menu_list[]" value="{{p.id}}" >
+    		<label>{{p.name}}</label>
+    	</div>
+   		
+    	
+    </div>
+
+
+    <div  class="form-group" style="text-align: center;">
+    <button name="addmnu" type="submit" class="btn btn-icon btn-icon-left btn-primary btn-lg waves-effect waves-light"><i class="ico fa fa-plus"></i>Add Menu</button>
+    </div>
+</form>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<style type="text/css">
+	.select2-container{
+		width: 100%!important;
+	}
+	.chkbx{
+padding-left: 10px;
+    padding-right: 10px;
+    display: inline-block;
+    font-size: 16px;
+
+}
+
+.chkbx > input[type=checkbox]{
+	width: 20px;
+    height: 15px;
+    vertical-align: text-top;
+}
+</style>
+
+<script type="text/javascript">
+	if (!localStorage.getItem("adminuser")) {
+  location.href=".";
+}
+</script>
+
+	<i ng-include="'footer.html'"></i>

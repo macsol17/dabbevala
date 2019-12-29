@@ -1,0 +1,8 @@
+.page-template-template-homepage-v6 .footer-social-icons ul li:nth-of-type(1n+5) {
+  display: none; }
+
+.pizzaro_about_widget ul.social-icons li:nth-of-type(1n+4) {
+  display: none; }
+
+.pizzaro-breadcrumb .delimiter + .delimiter {
+  display: none; }

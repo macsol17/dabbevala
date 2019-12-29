@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Dabbevala || Panel</title>
+
+	<!-- Main Styles -->
+	<link rel="stylesheet" href="../modules/assets/styles/style.min.css">
+
+	<!-- mCustomScrollbar -->
+	<link rel="stylesheet" href="../modules/assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.min.css">
+
+	<!-- Waves Effect -->
+	<link rel="stylesheet" href="../modules/assets/plugin/waves/waves.min.css">
+
+	<!-- Sweet Alert -->
+	<link rel="stylesheet" href="../modules/assets/plugin/sweet-alert/sweetalert.css">
+	
+	<!-- Percent Circle -->
+	<link rel="stylesheet" href="../modules/assets/plugin/percircle/css/percircle.css">
+
+	<!-- Chartist Chart -->
+	<link rel="stylesheet" href="../modules/assets/plugin/chart/chartist/chartist.min.css">
+
+	<!-- FullCalendar -->
+	<link rel="stylesheet" href="../modules/assets/plugin/fullcalendar/fullcalendar.min.css">
+	<link rel="stylesheet" href="../modules/assets/plugin/dropify/css/dropify.min.css">
+	<link rel="stylesheet" href="../modules/assets/plugin/fullcalendar/fullcalendar.print.css" media='print'>
+
+	<!-- Color Picker -->
+	<link rel="stylesheet" href="../modules/assets/color-switcher/color-switcher.min.css">
+
+	
+	<!-- FlexDatalist -->
+	<link rel="stylesheet" href="../modules/assets/plugin/flexdatalist/jquery.flexdatalist.min.css">
+
+	<!-- Popover -->
+	<link rel="stylesheet" href="../modules/assets/plugin/popover/jquery.popSelect.min.css">
+
+	<!-- Select2 -->
+	<link rel="stylesheet" href="../modules/assets/plugin/select2/css/select2.min.css">
+
+	<!-- Timepicker -->
+	<link rel="stylesheet" href="../modules/assets/plugin/timepicker/bootstrap-timepicker.min.css">
+
+	<!-- Touch Spin -->
+	<link rel="stylesheet" href="../modules/assets/plugin/touchspin/jquery.bootstrap-touchspin.min.css">
+
+	<!-- Colorpicker -->
+	<link rel="stylesheet" href="../modules/assets/plugin/colorpicker/css/bootstrap-colorpicker.min.css">
+
+	<!-- Datepicker -->
+	<link rel="stylesheet" href="../modules/assets/plugin/datepicker/css/bootstrap-datepicker.min.css">
+
+	<!-- DateRangepicker -->
+	<link rel="stylesheet" href="../modules/assets/plugin/daterangepicker/daterangepicker.css">
+
+	<!-- Color Picker -->
+	<link rel="stylesheet" href="../modules/assets/color-switcher/color-switcher.min.css">
+	<script src="../modules/assets/scripts/jquery.min.js"></script>
+	<script data-require="angular.js@*" data-semver="1.5.0" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+	<script type="text/javascript" src="js/adminit.js"></script>
+	<script type="text/javascript" src="js/admfun.js"></script>
+</head>
+
+<body ng-app="dvadm" ng-controller="dvadmCtrl">
+	
+	
+
+<div id="single-wrapper">
+	<form method="POST" ng-submit="admlogin()" class="frm-single">
+		<div class="inside">
+			<div class="title">Admin</div>
+			<!-- /.title -->
+			<div class="frm-title">Login</div>
+			<!-- /.frm-title -->
+			<div class="frm-input"><input name="usrname" ng-model="usrname" type="text" placeholder="Username" class="frm-inp" required><i class="fa fa-user frm-ico"></i></div>
+			<!-- /.frm-input -->
+			<div class="frm-input"><input name="usrpass" ng-model="usrpass" type="password" placeholder="Password" class="frm-inp" required><i class="fa fa-lock frm-ico"></i></div>
+			<!-- /.frm-input -->
+			<div class="clearfix margin-bottom-20">
+				<div class="pull-left">
+					<div class="checkbox primary"><input type="checkbox" id="rememberme"><label for="rememberme">Remember me</label></div>
+					<!-- /.checkbox -->
+				</div>
+				<!-- /.pull-left -->
+				<div class="pull-right"><a href="page-recoverpw.html" class="a-link"><i class="fa fa-unlock-alt"></i>Forgot password?</a></div>
+				<!-- /.pull-right -->
+			</div>
+			<!-- /.clearfix -->
+			<button type="submit" name="login" class="frm-submit">Login<i class="fa fa-arrow-circle-right"></i></button>
+		
+			
+			<div class="frm-footer">Dabbawala © 2019.</div>
+			<!-- /.footer -->
+		</div>
+		<!-- .inside -->
+	</form>
+	<!-- /.frm-single -->
+</div><!--/#single-wrapper -->
+
+
+
+
+	<i ng-include="'footer.html'"></i>
