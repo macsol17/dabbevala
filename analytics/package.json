@@ -95,7 +95,7 @@
     "redux-thunk": "^2.1.0",
     "request": "^2.85.0",
     "rxjs": "^6.2.1",
-    "select2": "^3.5",
+    "select2": "^4.0",
     "sinon": "^1.17.6",
     "source-map-loader": "^0.2.4",
     "style-loader": "^0.13.1",
